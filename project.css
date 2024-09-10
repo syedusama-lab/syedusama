@@ -79,7 +79,7 @@ video{
     position: relative;
 }
 .page1 h1::before{
-    content: "EAT. DRINK. PLAY";
+    content: "EAT. DRINK. PLAY.";
     position: absolute;
     top: -5px;
     left: -6px;
@@ -149,7 +149,8 @@ video{
     }   
 }
 .about{
-    height: 60vh;
+    background-color: transparent;
+    height: 90vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -180,13 +181,11 @@ video{
     font-size: 40px;
     font-weight: 200px;
     font-family: myfont1;
-    margin-bottom: 30px;
+    line-height: 2;
 }
 .about_us p{
     font-size: 20px;
-}
-.about_us p:nth-child(2){
-    margin-bottom: 30px;
+    line-height: 2;
 }
 .cards_container{
     background-color: black;
@@ -194,7 +193,6 @@ video{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 90px;
 }
 .card{
     height: 90%;
@@ -220,26 +218,306 @@ video{
     width: 100%;
     background-color: #95C11E;
     border-radius: 15px;
-    padding: 30px;
-    padding-top: 130px;
+    padding: 0px 30px 0px 30px; 
+    overflow: hidden;
     opacity: 0;
     transition: all ease 0.6s;
+}
+.overlay_button{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    float: right;
+    margin-right: -75px;
+    margin-top: -55px;
+    border: 2px solid black;
+}
+.arrow_button{
+    clip-path: polygon(0 46%, 84% 47%, 49% 0, 100% 50%, 48% 100%, 82% 57%, 0 56%);
+    background-color: black;
+    height: 40px;
+    width: 35px;
+    margin-top: 35px;
+    margin-left: -25px;
+}
+.overlay_button:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.overlay_button:hover .arrow_button{
+    background-color: #95C11E;
+    cursor: pointer;
 }
 .overlay h4{
     color: black;
     font-size: 35px;
     margin-bottom: 15px;
+    margin-top: 110px;
 }
 .overlay p{
     color: black;
     font-size: 16px;
 }
-.overlay p:nth-child(2){
+.overlay p:nth-child(3){
     margin-bottom: 30px;
 }
 .card:hover .overlay{
     opacity: 1;
 }
 .card:hover{
-    transform: rotate3d(1,1,0,20deg);
+    transform: rotate3d(1,-1,0,20deg);
+}
+.signup_div{
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,#16A139, #ACE022 );
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    position: relative;
+}
+.signup_div img{
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 100%;
+    object-fit: cover;
+    width: 10%;
+}
+.signup_div h4{
+    width: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 500px;
+    color: black;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.tilted_div_parent{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+}
+.tilted_div_child{
+    height: 70%;
+    width: 110%;
+    margin-left: -10px;
+    transform: skew(-3deg,-3deg);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    z-index: 10;
+}
+.tilt_child{
+    height: 95%;
+    width: 15%;
+    border-radius: 20px;
+    transform: skew(5deg,3deg);
+    background-color: black;
+}
+.tilt_child:nth-child(1){
+    object-fit: cover;
+    background-position: center;
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/435318823_258606790673865_2530423443188938293_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+.tilt_child:nth-child(2){
+    object-fit: cover;
+    background-position: center;
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/453518734_1037047134723040_8073951644951463776_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+.tilt_child:nth-child(3){
+    object-fit: cover;
+    background-position: center;
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/448523995_1030727008770120_6567554558293281910_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+.tilt_child:nth-child(4){
+    object-fit: cover;
+    background-position: center;
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/447929470_988634446296987_6093112883687622864_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+.tilt_child:nth-child(5){
+    object-fit: cover;
+    background-position: center;
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/447781550_991790659220634_5577119039868959224_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+.tilt_child:nth-child(6){
+    object-fit: cover;
+    background-position: center;
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/446099330_436478269139605_3616962284735382682_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+.tilt_child:nth-child(7){
+    object-fit: cover;
+    background-position: center;
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/448523995_1030727008770120_6567554558293281910_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+}
+.food_drink{
+    width: 100%;
+    height: 90vh;
+    background-color: black;
+    display: flex;
+    position: relative;
+   
+}
+.image_div{
+    height: 100%;
+    width: 50%;
+    z-index: 10;
+}
+.image_child1{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.image_child1 img{
+    height: 90%;
+    width: 85%;
+    border-radius: 20px;
+}
+.image_child2{
+    height: 20%;
+    width: 100%;
+}
+.image_child2 img{
+    height: 40px;
+    width: 90px;
+    margin-left: 100px;
+    margin-top: -18px;
+    object-fit: cover;
+}
+.image_txt{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+    padding-top: 40px;
+    font-size: 20px;
+    line-height: 1.7;
+    z-index: 10;
+}
+
+.image_txt p:nth-child(2){
+    margin-bottom: 20px;
+}
+.food_btn{
+    height: 45px;
+    width: 175px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border: 2px solid #ACE022;
+    transition: all ease 0.6s;
+    margin-top: 70px;
+}
+.food_btn:hover{
+    color: black;
+    background-color: #ACE022;
+    cursor: pointer;
+}
+.insta{
+    width: 26%;
+    height: 30px;
+    display: flex;
+    font-weight: 400;
+    gap: 10px;
+    align-items: center;
+    margin-left: 900px;
+    transform: skew(-3deg,-3deg);
+    position: relative;
+    z-index: 10;
+}
+.insta h3{
+    color: white;
+}
+.insta:hover h3{
+    color: #ACE022;
+    cursor: pointer;
+}
+
+
+
+.footer{
+    height: 60vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,#16A139, #ACE022 );
+    position: relative;
+    z-index: 10;
+}
+.footer_details{
+    height: 80%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+}
+.footer_logo{
+    height: 100%;
+    width: 17%;
+    display: flex;
+    flex-direction: column;
+}
+.footer_logo img:nth-child(1){
+    height: 30%;
+    margin-top: 70px;
+    margin-left: 80px;
+    margin-bottom: 50px;
+}
+.footer_logo img:nth-child(2){
+    height: 10%;
+    width: 12%;
+    margin-left: 92px;
+}
+.footer_logo img:nth-child(3){
+    margin-top: -26px;
+    margin-left: 130px;
+    height: 10%;
+    width: 12%;
+}
+.footer_txt1{
+    height: 100%;
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.6;
+    padding-left: 40px;
+    font-size: 17px;
+    text-transform: uppercase;
+
+}
+.footer_txt1 h2,h3{
+    color: black;
+    font-weight: bolder;
+}
+.footer_txt1 h4{
+    color: black;
+    font-weight: normal;
+}
+.footer_copyright{
+    height: 20%;
+    width: 100%;
+    background-color: transparent;
+    padding-left: 110px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+.footer_copyright p{
+    color: black;
+}
+.footer_copyright p:nth-child(1){
+    margin-right: 150px;
 }
